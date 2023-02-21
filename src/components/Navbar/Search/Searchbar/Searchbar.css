@@ -1,0 +1,126 @@
+.searchbar {
+    position: fixed;
+    top: 130px;
+    right: 100%;
+    height: 65%;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .searchbar.activetwo {
+    right: 0;
+  }
+  
+  .searchbar .content {
+    width: 100%;
+    height: 60vh;
+    padding: 10px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .searchbar .content button {
+    cursor: pointer;
+    width: 5vw;
+    font-size: 12px;
+    height: 3vh;
+    border: none;
+    color: wheat;
+    background-color: black;
+    margin-right: 15px;
+  }
+  
+  .searchbar.activetwo .content {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .container-cardsearch {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .container-cardsearch .card {
+    margin: 15px;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    width: 20%;
+  }
+  
+  .container-cardsearch .card img {
+    box-shadow: -14px 4px 30px 5px rgba(70, 70, 70, 0.1);
+    border-radius: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    height: 20vh;
+    width: 15vh;
+  }
+  
+  .desc-content-search {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .desc-content-search {
+    font-size: 15px;
+  }
+  
+  .desc-content-search h6 {
+    color: #cc0404;
+    margin-top: 10px;
+    text-decoration: line-through;
+  }
+  
+  .span-search {
+    box-shadow: 0px 44px 36px -16px rgba(0,0,0,0.1);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .span-search a {
+    color: rgb(0, 119, 255);
+    margin-left: 40px;
+  }
+
+  @media screen and (max-width: 380px) {
+    .searchbar {
+      top: 115px;
+    }
+
+    .container-cardsearch {
+      flex-direction: column;
+      padding: 2px;
+    }
+
+    .desc-content-search {
+      width: 100%;
+    }
+
+    .desc-content-search h5 {
+      width: 50vw;
+    }
+
+    .span-search a {
+      font-size: 12px;
+    }
+
+    .searchbar .content {
+      overflow-x: scroll;
+      padding: 20px;
+    }
+
+    .searchbar .content button {
+      width: 15vw;
+      font-size: 9px;
+      height: 4vh;
+      margin-right: 9px;
+    }
+  }
