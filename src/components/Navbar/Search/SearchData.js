@@ -1,4 +1,3 @@
-import img from './images/aquecedor.png';
 import imgtwo from './images/funko.png';
 import imgthree from './images/funkotwo.jpg';
 
@@ -28,7 +27,7 @@ export const SearchData = [
     discount: 'R$ 500,00',
   },
   {
-    title: 'Boneco',
+    title: 'Funko Pop! Movies: Tombstone - Wyatt EARP',
     img: imgthree,
     price: 'R$ 3.000,00',
     discount: 'R$ 1.500,00',

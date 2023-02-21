@@ -21,6 +21,7 @@
   }
   
   .searchbar .content button {
+    font-weight: bolder;
     cursor: pointer;
     width: 5vw;
     font-size: 12px;
@@ -122,5 +123,50 @@
       font-size: 9px;
       height: 4vh;
       margin-right: 9px;
+    }
+  }
+
+  @media screen and (min-width: 380px) and (max-width: 460px) {
+    .searchbar {
+      top: 155px;
+    }
+
+    .container-cardsearch {
+      flex-direction: column;
+      padding: 2px;
+    }
+
+    .container-cardsearch .card img {
+      height: 15vh;
+      width: 10vh;
+    }
+
+    .desc-content-search {
+      width: 100%;
+    }
+
+    .desc-content-search h5 {
+      width: 50vw;
+    }
+
+    .span-search a {
+      font-size: 12px;
+    }
+
+    .searchbar .content {
+      height: 40vh;
+      overflow-x: scroll;
+      padding: 20px;
+    }
+
+    .searchbar .content button {
+      width: 15vw;
+      font-size: 9px;
+      height: 3vh;
+      margin-right: 9px;
+    }
+
+    .container-cardsearch .card {
+      margin: 10px;
     }
   }

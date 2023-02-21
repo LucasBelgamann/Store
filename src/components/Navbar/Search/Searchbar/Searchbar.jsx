@@ -10,11 +10,11 @@ export default function Searchbar() {
     <div className={!isToggle ? "searchbar" : "searchbar activetwo"}>
       <div className="content">
         <div>
-          <button type="button">Categoria</button>
-          <button type="button">Categoria</button>
-          <button type="button">Categoria</button>
-          <button type="button">Categoria</button>
-          <button type="button">Categoria</button>
+          <button type="button">Livros</button>
+          <button type="button">Games</button>
+          <button type="button">Eletrônicos</button>
+          <button type="button">Roupas</button>
+          <button type="button">Utensílios</button>
         </div>
         <div className="container-cardsearch">
           {SearchData.map((e) => (
