@@ -3,7 +3,7 @@ import * as FaBeerIcon from "react-icons/fa";
 import * as BiBeerIcon from "react-icons/bi";
 import * as CgBeerIcon from "react-icons/cg";
 import * as AiBeerIcon from "react-icons/ai";
-import logo from './img/LogoStore.png';
+import logo from './img/storeLogo.png';
 import { useContext } from "react";
 import Context from "../../context/Context";
 import './NavNew.css';
