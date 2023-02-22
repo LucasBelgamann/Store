@@ -1,0 +1,143 @@
+.container-slider {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider{
+    margin-top: 100px;
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 1000px;
+    height: 600px;
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: gray;
+  }
+
+  .checked {
+    background: gray;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+
+
+  @media screen and (max-width: 380px) {
+    .container-slider {
+      height: 75vh;
+    }
+
+    .slider{
+      margin-top: 0px;
+      width: 350px;
+      height: 250px;
+    }
+
+    .slide img{
+      width: 350px;
+      height: 250px;
+    }
+
+    .navigation-manual{
+      margin-top: -80%;
+      margin-left: 3%;
+    }
+
+    .manual-btn{
+      border: 2px solid gray;
+      padding: 3px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+  }
+  
+  @media screen and (min-width: 380px) and (max-width: 460px) {
+    .container-slider {
+      height: 65vh;
+    }
+
+    .slider{
+      margin-top: 0px;
+      width: 390px;
+      height: 250px;
+    }
+
+    .slide img{
+      width: 390px;
+      height: 250px;
+    }
+
+    .navigation-manual{
+      margin-top: -75%;
+      margin-left: 3%;
+    }
+
+    .manual-btn{
+      border: 2px solid gray;
+      padding: 3px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+  }
+  
+  

@@ -17,8 +17,8 @@ export default function Searchbar() {
           <button type="button">Utensílios</button>
         </div>
         <div className="container-cardsearch">
-          {SearchData.map((e) => (
-            <div className="card">
+          {SearchData.map((e, i) => (
+            <div key={ i } className="card">
               <img src={e.img} alt={`${e.title}-search-image`} />
               <div className="desc-content-search">
                 <h5>{e.title}</h5>

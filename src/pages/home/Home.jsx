@@ -1,10 +1,12 @@
 import Navbar from "../../components/Navbar/Nav";
+import Slider from "../../components/Slider/SliderAuto";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Navbar />
-    </div>
+      <Slider />
+    </>
   );
 };
 export default Home;

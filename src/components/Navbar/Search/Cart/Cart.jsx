@@ -12,8 +12,8 @@ export default function Cart() {
           className={!isCart ? "cart-container" : "cart-container activeCart"}
         >
           <div className="itens-cart">
-            {SearchData.map((e) => (
-              <div className="card-cart">
+            {SearchData.map((e, i) => (
+              <div  key={ i } className="card-cart">
                 <img src={e.img} alt={`${e.title}-search-image`} />
                 <div className="desc-content-cart">
                   <h5>{e.title}</h5>
