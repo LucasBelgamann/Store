@@ -68,6 +68,7 @@
     cursor: pointer;
     margin-top: 170px;
     opacity: 0.9;
+    color: black;
     transition: opacity;
     transition-duration: 1s;
     color: rgb(234, 188, 103)
