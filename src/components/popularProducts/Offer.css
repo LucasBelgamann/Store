@@ -12,7 +12,7 @@
     width: 60%;
     height: 65vh;
     margin: auto;
-    position: relative;
+    /* position: relative; */
 }
 
 .offer-title {
@@ -70,7 +70,7 @@
     opacity: 0.9;
     transition: opacity;
     transition-duration: 1s;
-    color: white
+    color: rgb(234, 188, 103)
 };
 
 .arrow-left:hover, .arrow-right:hover {
@@ -92,21 +92,25 @@
     }
 
     .card-offer img {
-        width: 45vw;
-        height: 20vh;
+        width: 35vw;
+        height: 12vh;
         object-fit: cover;
     }
     
     .card-offer {
-        width: 45vw;
-        height: 40vh;
+        width: 35vw;
+        height: 30vh;
     }
 
     .card-offer h5 {
         color: #a6a4a4;
         text-align: center;
         width: 80%;
-        font-size: 8px;
+        font-size: 7px;
+    }
+
+    .card-offer h4 {
+        font-size: 12px;
     }
 
     .card-offer button {
@@ -116,43 +120,48 @@
     }
 
     .arrow-left, .arrow-right {
-        margin-top: 110px;
+        margin-top: 80px;
         font-size: 50px;
     };
 }
 
 @media screen and (min-width: 380px) and (max-width: 460px) {
     .offer-container {
-        margin-top: -100px;
+        margin-top: -110px;
         width: 95%;
     }
 
     .card-offer img {
-        width: 45vw;
-        height: 15vh;
+        width: 35vw;
+        height: 10vh;
         object-fit: cover;
     }
     
     .card-offer {
-        width: 45vw;
-        height: 35vh;
+        width: 35vw;
+        height: 25vh;
     }
 
     .card-offer h5 {
         color: #a6a4a4;
         text-align: center;
         width: 80%;
-        font-size: 8px;
+        font-size: 7px;
+    }
+
+
+    .card-offer h4 {
+        font-size: 12px;
     }
 
     .card-offer button {
-        height: 4vh;
+        height: 3vh;
         font-size: 9px;
         width: 30vw;
     }
 
     .arrow-left, .arrow-right {
-        margin-top: 110px;
+        margin-top: 90px;
         font-size: 50px;
     };
 }

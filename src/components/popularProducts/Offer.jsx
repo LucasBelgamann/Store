@@ -1,4 +1,4 @@
-import * as IoIcons from "react-icons/io";
+import * as MdIcons from "react-icons/md";
 import { useRef } from 'react';
 import { SearchData } from '../Navbar/Search/SearchData';
 import './Offer.css';
@@ -21,8 +21,8 @@ function Hards() {
             <div className='offer-container'>
                 <h2 className='offer-title' id="hards">Ofertas</h2>
                 <div className="carousel" ref={carousel}>
-                <IoIcons.IoIosArrowDropleftCircle className='arrow-left' onClick={handleLeftCLick}/>
-                <IoIcons.IoIosArrowDroprightCircle className='arrow-right' onClick={handleRightCLick}/>
+                <MdIcons.MdArrowBackIos className='arrow-left' onClick={handleLeftCLick}/>
+                <MdIcons.MdArrowForwardIos className='arrow-right' onClick={handleRightCLick}/>
                     {SearchData.map((e) => {
                         return (
                             <div className='card-offer' key={e.title}>
