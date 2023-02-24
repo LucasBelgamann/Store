@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar/Nav";
+import Offer from "../../components/popularProducts/Offer";
 import Slider from "../../components/Slider/SliderAuto";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Navbar />
       <Slider />
+      <Offer />
     </>
   );
 };
