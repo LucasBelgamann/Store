@@ -1,11 +1,13 @@
 import * as MdIcons from "react-icons/md";
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { SearchData } from '../Navbar/Search/SearchData';
 import './Offer.css';
+import Context from "../../context/Context";
 
 function Hards() {
+    const { addToCart, removeQuantity } = useContext(Context);
     const carousel = useRef(null);
-
+    
     const handleLeftCLick = (e) => {
         e.preventDefault();
         carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -29,7 +31,7 @@ function Hards() {
                                 <img src={e.img} alt={e.title} />   
                                 <h5>{e.title}</h5>
                                 <h4>{e.price}</h4>
-                                <button>Adicionar ao carrinho</button>
+                                <button type="button" onClick={ () => addToCart({ ...e, quantity: 1 }) }>Adicionar ao carrinho</button>
                             </div>
                         )
                     })}
