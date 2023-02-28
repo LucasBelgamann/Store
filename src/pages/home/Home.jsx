@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar/Nav";
 import Offer from "../../components/popularProducts/Offer";
+import Seller from "../../components/popularProducts/Seller";
 import Slider from "../../components/Slider/SliderAuto";
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
     <>
       <Navbar />
       <Slider />
-      <Offer />
+      {/* <Offer /> */}
+      <Seller />
     </>
   );
 };

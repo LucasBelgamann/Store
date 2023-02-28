@@ -3,11 +3,6 @@
     overflow-x: scroll;
 }
 
-/* .carousel::-webkit-scrollbar {
-    display: none;
-}; */
-
-
 .offer-container {
     width: 60%;
     height: 65vh;

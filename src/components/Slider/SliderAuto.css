@@ -82,11 +82,11 @@
 
   @media screen and (max-width: 380px) {
     .container-slider {
-      height: 75vh;
+      height: 55vh;
     }
 
-    .slider{
-      margin-top: 0px;
+    .slider {
+      margin-top: 125px;
       width: 350px;
       height: 250px;
     }
@@ -112,12 +112,12 @@
   
   @media screen and (min-width: 380px) and (max-width: 460px) {
     .container-slider {
-      height: 65vh;
+      height: 50vh;
     }
 
-    .slider{
-      margin-top: 0px;
-      width: 390px;
+    .slider {
+      margin-top: 125px;
+      width: 350px;
       height: 250px;
     }
 
@@ -127,7 +127,7 @@
     }
 
     .navigation-manual{
-      margin-top: -75%;
+      margin-top: -80%;
       margin-left: 3%;
     }
 
