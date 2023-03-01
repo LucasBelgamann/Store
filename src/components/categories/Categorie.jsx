@@ -6,7 +6,7 @@ export default function Categories() {
         <div className="categories-container">
             {CategoriesData.map((e, i) => (
                 <div className="category-card">
-                    <img src={e.img} alt={e.title} />
+                    <a>{e.img}</a>
                     <span>{e.title}</span>
                 </div>
             ))}

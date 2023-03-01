@@ -5,40 +5,39 @@
     align-items: center;
 }
 
-.category-card img {
-    width: 10vw;
-    object-fit: cover;
-    height: 20vh;
-    border-radius: 150px;
+.category-card svg {
+    font-size: 70px;
+    color: #a1a1a1;
+}
+
+.category-card span {
+    color: #a1a1a1;
 }
 
 .category-card {
-    margin: 20px;
+    margin: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @media screen and (max-width: 380px) {
-    .category-card img {
-        width: 25vw;
-        object-fit: cover;
-        height: 15vh;
-        border-radius: 150px;
+    .category-card svg {
+        font-size: 45px;
+        color: #a1a1a1;
     }
 
     .categories-container {
+        height: 25vh;
        overflow-x: scroll;
        justify-content: flex-start;
     }
 }
 
 @media screen and (min-width: 380px) and (max-width: 460px) {
-    .category-card img {
-        width: 22vw;
-        object-fit: cover;
-        height: 10vh;
-        border-radius: 150px;
+    .category-card svg {
+        font-size: 65px;
+        color: #a1a1a1;
     }
 
     .categories-container {

@@ -1,27 +1,25 @@
-import inforCategorie from './img/inforCategorie.jpg';
-import booksCategorie from './img/booksCategorie.jpg';
-import gamesCategorie from './img/gamesCategorie.jpg';
-import clothesCategorie from './img/clothesCategorie.jpg';
+import * as RiIcon from 'react-icons/ri';
+import * as GiIcon from 'react-icons/gi';
 
 export const CategoriesData = [
   {
     id: 1,
     title: 'Informática',
-    img: inforCategorie
+    img: <RiIcon.RiComputerLine />
   },
   {
     id: 2,
     title: 'Livros',
-    img: booksCategorie
+    img: <GiIcon.GiBookshelf />
   },
   {
     id: 3,
     title: 'Jogos',
-    img: gamesCategorie,
+    img: <GiIcon.GiGamepad />,
   },
   {
     id: 4,
     title: 'Roupas',
-    img: clothesCategorie
+    img: <GiIcon.GiClothes />
   },
 ];
