@@ -1,0 +1,21 @@
+.ad-container {
+    height: 25vh;
+    margin: auto;
+    width: 65%;
+    background-color: black;
+}
+
+@media screen and (max-width: 380px) {
+    .ad-container {
+        height: 20vh;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 460px) {
+    .ad-container {
+        height: 15vh;
+        margin-top: 25px;
+        width: 100%;
+    }
+}
