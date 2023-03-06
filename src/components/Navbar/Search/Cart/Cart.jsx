@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import Context from "../../../../context/Context";
 import "./Cart.css";
@@ -6,6 +6,12 @@ import "./Cart.css";
 export default function Cart() {
   const { isCart, storage, removeQuantity, addToCart, removeItem } =
     useContext(Context);
+    const [total, setTotal] = useState(0)
+
+    useEffect(() => {
+      const somaTotal = storage.reduce((acc, c) => c.discount * c.quantity + acc, 0);
+      setTotal(somaTotal.toFixed(2).replace('.', ','));
+    }, [setTotal, storage]);
 
   return (
     <div className={!isCart ? "cart-container" : "cart-container activeCart"}>
@@ -16,8 +22,8 @@ export default function Cart() {
             <div className="desc-content-cart">
               <h5>{e.title}</h5>
               <div className="price-cart">
-                <h6>{e.discount}</h6>
-                <h5>{e.price}</h5>
+                <h6>{e.price}</h6>
+                <h5>{e.discount}</h5>
               </div>
               <div className="btns-cart">
                 <button
@@ -53,10 +59,10 @@ export default function Cart() {
           <span>Adicionar todos os itens aos favoritos</span>
         </div>
         <h5 className="sub-total-cart">
-          Sub total: <span>R$ 400,00</span>
+          Sub total: <span>{total}</span>
         </h5>
         <h5 className="shiping">
-          Frete: <span>R$ 20,00</span>
+          Frete: <span>{storage.length}</span>
         </h5>
         <h3 className="total-cart">
           Total: <span>R$ 420,00</span>

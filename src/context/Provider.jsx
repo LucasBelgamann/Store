@@ -7,6 +7,8 @@ function Provider({ children }) {
   const [isToggle, setIsToggle] = useState(false);
   const [isCart, setIisCart] = useState(false);
   const [storage, setStorage] = useLocalStorage("carrinho", []);
+  const [favorites, setFavorites] = useLocalStorage("favorites", []);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const addToCart = ({ id, title, price, discount, img, quantity }) => {
     const indexItem = storage.findIndex((item) => item.id === id);
@@ -45,7 +47,11 @@ function Provider({ children }) {
     storage,
     setStorage,
     addToCart,
-    removeItem
+    removeItem,
+    isFavorite,
+    setIsFavorite,
+    favorites, 
+    setFavorites
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
