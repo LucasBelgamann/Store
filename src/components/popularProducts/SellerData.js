@@ -14,6 +14,7 @@ export const SellerData = [
     img: chuckyFunko,
     price: 150,
     discount: 100,
+    favorite: false,
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const SellerData = [
     img: funkoFreira,
     price: 139,
     discount: 120,
+    favorite: false,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const SellerData = [
     img: funkoHarry,
     price: 156,
     discount: 145,
+    favorite: false,
   },
   {
     id: 4,
@@ -35,13 +38,15 @@ export const SellerData = [
     img: funkoPietro,
     price: 140,
     discount: 115,
-  },
+    favorite: false,
+    },
   {
     id: 5,
     title: 'Funko Pop Pinóquio',
     img: funkoPinoquio,
     price: 150,
-    discount: 145
+    discount: 145,
+    favorite: false,
   },
   {
     id: 6,
@@ -49,6 +54,7 @@ export const SellerData = [
     img: funkoGoku,
     price: 150,
     discount: 145,
+    favorite: false,
   },
   {
     id: 7,
@@ -56,13 +62,15 @@ export const SellerData = [
     img: funkoRaponzel,
     price: 150,
     discount: 145,
+    favorite: false,
   },
   {
     id: 8,
     title: 'Funko Pop Batman',
     img: funkoBatman,
     price: 150,
-    discount: 145,  
+    discount: 145,
+    favorite: false,
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const SellerData = [
     img: chuckyFunko,
     price: 150,
     discount: 100,
+    favorite: false,
   },
   {
     id: 10,
@@ -77,6 +86,7 @@ export const SellerData = [
     img: funkoFreira,
     price: 139,
     discount: 120,
+    favorite: false,
   },
   {
     id: 11,
@@ -84,6 +94,7 @@ export const SellerData = [
     img: funkoHarry,
     price: 156,
     discount: 145,
+    favorite: false,
   },
   {
     id: 12,
@@ -91,6 +102,7 @@ export const SellerData = [
     img: funkoPietro,
     price: 140,
     discount: 115,
+    favorite: false,
   },
   {
     id: 14,
@@ -98,6 +110,7 @@ export const SellerData = [
     img: funkoFreira,
     price: 139,
     discount: 120,
+    favorite: false,
   },
   {
     id: 15,
@@ -105,6 +118,7 @@ export const SellerData = [
     img: funkoHarry,
     price: 156,
     discount: 145,
+    favorite: false,
   },
   {
     id: 16,
@@ -112,5 +126,6 @@ export const SellerData = [
     img: funkoHarry,
     price: 156,
     discount: 145,
+    favorite: false,
   }
 ];

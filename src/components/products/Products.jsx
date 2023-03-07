@@ -3,17 +3,19 @@ import Context from "../../context/Context";
 import * as AiBeerIcon from "react-icons/ai";
 import { SellerData } from "../popularProducts/SellerData";
 import "./Products.css";
+import useLocalStorage from "use-local-storage";
 
 export default function Products() {
-  const { addToCart, isFavorite, setIsFavorite, favorites, setFavorites } = useContext(Context);
+  const { addToCart, favorites, setFavorites } = useContext(Context);
 
-  const handleToggle = (e) => {
+  const handleToggle = (e, target) => {
     if (favorites.length
       && favorites.some((item) => item.id === e.id)) {
-      setIsFavorite(true);
+      target.style = ''
     } else {
-      setIsFavorite(false);
+      target.style = 'color: red;'
     }
+    
     if (
       favorites.length
       && favorites.some((item) => item.id === e.id)
@@ -24,11 +26,9 @@ export default function Products() {
     }
   };
 
-  // useEffect(() => {
-  //   if (favorites.length === 0) {
-  //     setIsFavorite(false)
-  //   }
-  // }, [])
+  useEffect(() => {
+    // favorites.filter((e) => btns.map((item) => item.innerHTML === e.title))
+  }, [setFavorites])
 
   return (
     <div className="products-container">
@@ -36,15 +36,11 @@ export default function Products() {
         {SellerData.map((e, i) => (
           <div key={i} className="card-product">
             <div className="image-product">
-              {isFavorite ? (
-                  <AiBeerIcon.AiOutlineHeart onClick={ () => handleToggle({ ...e, favorite: true }) } />
-              ) : (
-                <AiBeerIcon.AiFillHeart onClick={ () => handleToggle(e) } />
-              )}
+                <AiBeerIcon.AiFillHeart id="heart-icon" onClick={ ({ target }) => handleToggle({ ...e, favorite: true }, target) } />
               <img src={e.img} alt={e.title} />
             </div>
             <div className="more-product">
-              <h6>{e.title}</h6>
+              <h6 id="title-product">{e.title}</h6>
               <span className="price-product">
                 {e.price.toFixed(2).replace(".", ",")}
               </span>

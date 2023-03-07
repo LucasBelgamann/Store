@@ -8,15 +8,14 @@ function Provider({ children }) {
   const [isCart, setIisCart] = useState(false);
   const [storage, setStorage] = useLocalStorage("carrinho", []);
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
-  const [isFavorite, setIsFavorite] = useState(false);
 
-  const addToCart = ({ id, title, price, discount, img, quantity }) => {
+  const addToCart = ({ id, title, price, discount, img, quantity, favorite }) => {
     const indexItem = storage.findIndex((item) => item.id === id);
     if (indexItem >= 0) {
       storage[indexItem].quantity += 1;
       setStorage([...storage]);
     } else {
-      setStorage([...storage, { id, title, price, discount, img, quantity }]);
+      setStorage([...storage, { id, title, price, discount, img, quantity, favorite }]);
     }
   };
 
@@ -48,8 +47,6 @@ function Provider({ children }) {
     setStorage,
     addToCart,
     removeItem,
-    isFavorite,
-    setIsFavorite,
     favorites, 
     setFavorites
   };

@@ -37,9 +37,18 @@
     top: 5px;
     right: 5px;
     cursor: pointer;
-    color: red;
+    color: rgb(192, 184, 184);
     font-size: 35px;
     position: absolute;
+    transition: 0.5s;
+}
+
+.image-product svg:hover {
+    color: red;
+}
+
+.heart {
+    color: red;
 }
 
 .image-product {
