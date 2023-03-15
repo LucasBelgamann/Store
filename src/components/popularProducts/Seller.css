@@ -71,6 +71,7 @@
 @media screen and (max-width: 380px) {
     .container-seller-offer {
         overflow-x: scroll;
+        scroll-snap-type: x mandatory;
     }
 
     .container-seller-offer {
@@ -81,6 +82,7 @@
 
     .card-seller {
         height: 35vh;
+        scroll-snap-align: start;
     }
 
     .image-seller {
@@ -106,6 +108,7 @@
 
     .container-seller-offer {
         overflow-x: scroll;
+        scroll-snap-type: x mandatory;
     }
 
     .container-seller-offer {
@@ -116,6 +119,7 @@
 
     .card-seller {
         height: 27vh;
+        scroll-snap-align: start;
     }
 
     .image-seller {

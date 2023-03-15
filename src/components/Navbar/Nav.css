@@ -122,9 +122,36 @@
   height: 4vh;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart::before {
+  border: none;
+  content: attr(data-count);
+  position: absolute;
+  font-weight: bold;
+  top: -0.65em;
+  right: -0.65em;
+  width: 1em;
+  height:  1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  font-size: 10px;
+}
+
 @media screen and (max-width: 380px) {
   .logo-icon img {
     width: 40%;
+  }
+
+  .nav-links {
+    margin-right: 10px;
   }
 
   .nav-links svg {
@@ -158,6 +185,10 @@
 @media screen and (min-width: 380px) and (max-width: 460px) {
   .logo-icon img {
     width: 40%;
+  }
+
+  .nav-links {
+    margin-right: 10px;
   }
 
   .nav-links svg {
