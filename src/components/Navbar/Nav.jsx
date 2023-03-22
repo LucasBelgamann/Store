@@ -9,15 +9,19 @@ import Context from "../../context/Context";
 import "./Nav.css";
 import Searchbar from "./Search/Searchbar/Searchbar";
 import Cart from "./Search/Cart/Cart";
+import Favorites from "./Favorites/Favorites";
 
 export default function Navbar() {
-  const { isToggle, setIsToggle, isCart, setIisCart, storage } =
-    useContext(Context);
+  const { isToggle, setIsToggle, isCart, setIisCart, storage, setIsFavorite, isFavorite }
+  = useContext(Context);
 
   const handleToggle = () => {
     setIsToggle(!isToggle);
     if (isCart) {
       setIisCart(false);
+    }
+    if (isFavorite) {
+      setIsFavorite(false);
     }
   };
 
@@ -25,6 +29,19 @@ export default function Navbar() {
     setIisCart(!isCart);
     if (isToggle) {
       setIsToggle(false);
+    }
+    if (isFavorite) {
+      setIsFavorite(false);
+    }
+  };
+
+  const handleTFavorite = () => {
+    setIsFavorite(!isFavorite);
+    if (isToggle) {
+      setIsToggle(false);
+    }
+    if (isCart) {
+      setIisCart(false);
     }
   };
 
@@ -36,12 +53,10 @@ export default function Navbar() {
         </div>
         <div className="nav-links">
           <BsBeerIcon.BsPersonFill />
-          <AiBeerIcon.AiFillHeart />
-          <FaBeerIcon.FaShoppingCart
-            onClick={handleToggleCart}
-          />
-          <span       className="cart"
-            data-count={storage.length}></span>
+          <AiBeerIcon.AiFillHeart onClick={ handleTFavorite } />
+          <Favorites />
+          <FaBeerIcon.FaShoppingCart onClick={handleToggleCart} />
+          <span className="cart" data-count={storage.length}></span>
           <Cart />
         </div>
       </div>

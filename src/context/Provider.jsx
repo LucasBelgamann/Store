@@ -6,6 +6,7 @@ import Context from "./Context";
 function Provider({ children }) {
   const [isToggle, setIsToggle] = useState(false);
   const [isCart, setIisCart] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false)
   const [storage, setStorage] = useLocalStorage("carrinho", []);
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
 
@@ -48,7 +49,9 @@ function Provider({ children }) {
     addToCart,
     removeItem,
     favorites, 
-    setFavorites
+    setFavorites,
+    isFavorite, 
+    setIsFavorite
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

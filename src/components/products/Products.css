@@ -28,12 +28,13 @@
 }
 
 .image-product img {
+    user-select: none;
     width: 100%;
     aspect-ratio: 3/3;
     object-fit: contain;
 }
 
-.image-product svg {
+.heart-icon {
     top: 5px;
     right: 5px;
     cursor: pointer;
@@ -43,11 +44,11 @@
     transition: 0.5s;
 }
 
-.image-product svg:hover {
+/* .image-product svg:hover {
     color: red;
-}
+} */
 
-.heart {
+.favorite {
     color: red;
 }
 
@@ -80,6 +81,10 @@
     width: 10vw;
     margin-bottom: 10px; 
 }
+
+/* .aii {
+    color: red;
+} */
 
 @media screen and (max-width: 380px) {
     .container-products {

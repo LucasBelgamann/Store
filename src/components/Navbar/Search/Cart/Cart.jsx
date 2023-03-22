@@ -62,7 +62,7 @@ export default function Cart() {
           Sub total: <span>{total}</span>
         </h5>
         <h5 className="shiping">
-          Frete: <span>{storage.length}</span>
+          Frete: <span>{storage.length >= 3 ? 'Frete grátis' : storage.length}</span>
         </h5>
         <h3 className="total-cart">
           Total: <span>R$ 420,00</span>
