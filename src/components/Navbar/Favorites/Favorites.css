@@ -1,0 +1,160 @@
+.favorite-container {
+    position: fixed;
+    right: -100%;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.favorite-container.activeFavo {
+    top: 65px;
+    right: 0;
+}
+
+.finish-favorite {
+    height: 10vh;
+    width: 25vw;
+    padding: 20px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    box-shadow: -21px 7px 23px 13px rgba(0,0,0,0.1);
+    border-radius: 0 0 5px;
+}
+
+.itens-favorite {
+    background-color: white;
+    box-shadow: -35px 0px 23px -5px rgba(0,0,0,0.1); 
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 50vh;
+    width: 25vw;
+}
+
+.card-cart {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-cart img {
+    border-radius: 5px;
+    width: 30%;
+}
+
+.desc-content-cart {
+    width: 60%;
+}
+
+.desc-content-cart h5 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.btns-favorite button {
+    cursor: pointer;
+}
+
+.btns-favorite span {
+    font-size: 10px;
+    padding: 8px;
+}
+
+.btns-favorite .add-cart {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 68, 255);
+    font-size: 20px;
+}
+
+.btns-favorite .delete-favo {
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: red;
+    font-size: 20px;
+}
+
+.price-cart {
+    margin: 10px 0;
+}
+
+.price-cart h6 {
+    text-decoration: line-through;
+    color: red;
+}
+
+.favorites-addcart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    height: 10vh;
+    width: 100%;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.favorites-addcart svg {
+    color: white;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 380px) {
+    .favorite-container.activeFavo {
+        top: 60px;
+        right: 0;
+    }
+    
+    .desc-content-cart h5 {
+        font-size: 9px;
+    }
+
+    .finish-favorite {
+        height: 10vh;
+        width: 80vw;
+    }
+    
+    .itens-favorite {
+        height: 40vh;
+        width: 80vw;
+    }
+
+    .finish-btn {
+        width: 70vw;
+    }
+
+    .favorites-addcart span {
+       font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 460px) {
+    .cart-container.activeCart {
+        top: 80px;
+        right: 0;
+    }
+
+    .desc-content-cart h5 {
+        font-size: 9px;
+    }
+
+    .finish-favorite {
+        height: 10vh;
+        width: 85vw;
+    }
+    
+    .itens-favorite {
+        height: 40vh;
+        width: 85vw;
+    }
+
+    .favorites-addcart span {
+       font-size: 13px;
+    }
+}
