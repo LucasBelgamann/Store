@@ -6,7 +6,7 @@
 }
 
 .favorite-container.activeFavo {
-    top: 65px;
+    top: 80px;
     right: 0;
 }
 
@@ -53,28 +53,41 @@
     font-weight: normal;
 }
 
-.btns-favorite button {
-    cursor: pointer;
-}
-
-.btns-favorite span {
-    font-size: 10px;
-    padding: 8px;
-}
-
-.btns-favorite .add-cart {
-    border: none;
+.add-cart-fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    margin-right: 5px;
     border-radius: 5px;
-    background-color: rgb(0, 68, 255);
+    width: 2vw;
+    height: 4vh;
+}
+
+.add-cart-fav svg {
+    color: white;
     font-size: 20px;
+    margin: 0 auto;
 }
 
-.btns-favorite .delete-favo {
-    border: none;
-    border-radius: 5px;
-    margin-left: 5px;
+.remove-fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
+    border-radius: 5px;
+    width: 2vw;
+    height: 4vh;
+}
+
+.remove-fav svg {
+    color: white;
     font-size: 20px;
+    margin: 0 auto;
+}
+
+.btns-favorite {
+    display: flex;
 }
 
 .price-cart {
@@ -132,6 +145,24 @@
     .favorites-addcart span {
        font-size: 8px;
     }
+
+    .add-cart-fav {
+        width: 7vw;
+        height: 4vh;
+    }
+    
+    .add-cart-fav svg {
+        font-size: 15px;
+    }
+
+    .remove-fav {
+        width: 7vw;
+        height: 4vh;
+    }
+    
+    .remove-fav svg {
+        font-size: 15px;
+    }
 }
 
 @media screen and (min-width: 380px) and (max-width: 460px) {
@@ -156,5 +187,23 @@
 
     .favorites-addcart span {
        font-size: 13px;
+    }
+
+    .add-cart-fav {
+        width: 7vw;
+        height: 4vh;
+    }
+    
+    .add-cart-fav svg {
+        font-size: 20px;
+    }
+
+    .remove-fav {
+        width: 7vw;
+        height: 4vh;
+    }
+    
+    .remove-fav svg {
+        font-size: 20px;
     }
 }

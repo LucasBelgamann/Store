@@ -2,18 +2,21 @@ import { useContext } from "react";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import { CgTrash } from "react-icons/cg";
 import Context from "../../../context/Context";
-import './Favorites.css';
+import "./Favorites.css";
 
 export default function Favorites() {
-  const { addToCart, isFavorite, favorites, setFavorites } = useContext(Context);
+  const { addToCart, isFavorite, favorites, setFavorites } =
+    useContext(Context);
 
   const removeFavorite = (e) => {
     setFavorites(favorites.filter((f) => f.id !== e.id));
-  }
+  };
 
   return (
     <div
-      className={!isFavorite ? "favorite-container" : "favorite-container activeFavo"}
+      className={
+        !isFavorite ? "favorite-container" : "favorite-container activeFavo"
+      }
     >
       <div className="itens-favorite">
         {favorites.map((e, i) => (
@@ -26,16 +29,12 @@ export default function Favorites() {
                 <h5>{e.discount}</h5>
               </div>
               <div className="btns-favorite">
-                <button
-                  type="button"
-                  onClick={() => addToCart({ ...e, quantity: 1 })}
-                  className="add-cart"
-                >
+                <div className="add-cart-fav" onClick={() => addToCart({ ...e, quantity: 1 })}>
                   <BsFillCartPlusFill />
-                </button>
-                <button type="button" onClick={() => removeFavorite(e)} className="delete-favo">
+                </div>
+                <div className="remove-fav" onClick={ () => removeFavorite(e) }>
                   <CgTrash />
-                </button>
+                </div>
               </div>
             </div>
           </div>
